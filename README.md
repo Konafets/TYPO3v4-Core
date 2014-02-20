@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/Konafets/TYPO3v4-Core.png?branch=master)](https://travis-ci.org/Konafets/TYPO3v4-Core)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/Konafets/TYPO3v4-Core/badges/quality-score.png?s=e4f54e73f0b911a8b85d62d724ecbf913a0b9559)](https://scrutinizer-ci.com/g/Konafets/TYPO3v4-Core/)
+[![Code Coverage](https://scrutinizer-ci.com/g/Konafets/TYPO3v4-Core/badges/coverage.png?s=a4ce8ada3b1deab85d6c5d8f6e26973a050a8b56)](https://scrutinizer-ci.com/g/Konafets/TYPO3v4-Core/)
+
 TYPO3 CMS
 =========
 
