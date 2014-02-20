@@ -53,7 +53,7 @@ tools:
 
     php_cpd:
         enabled: true
-        excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*]
+        excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, Tests]
 
     external_code_coverage:
         enabled: true
