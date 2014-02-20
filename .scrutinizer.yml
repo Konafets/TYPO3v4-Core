@@ -64,4 +64,4 @@ tools:
 
     external_code_coverage:
         enabled: true
-        timeout: '1800'
+        timeout: '2400'
