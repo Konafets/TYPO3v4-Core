@@ -55,11 +55,12 @@ tools:
         enabled: false
         excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, Tests]
 
-   php_codesniffer:
-       enabled: true
-       filter:
-           excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/em/mod1/class.nusoap.php, typo3/sysext/fluid/*, typo3/sysext/extbase/*, typo3/sysext/indexed_search/class.doublemetaphone.php, typo3/sysext/core/Migrations/Code/LegacyClassesForIde.php,typo3/sysext/extensionmanager/*]
-       standard: TYPO3CMS
+    php_code_sniffer:
+        enabled: true
+        filter:
+            excluded_paths: [vendor/*, tests/*, Tests/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*]
+        config:
+            standard: TYPO3CMS
 
     external_code_coverage:
         enabled: true
