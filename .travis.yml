@@ -16,6 +16,7 @@ services:
   - memcached
 
 before_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
   - sudo apt-get install parallel
   - git clone --single-branch --branch master --depth 1 git://github.com/typo3-ci/TYPO3-Travis-Integration.git build-environment
   - source build-environment/install-helper.sh
@@ -36,8 +37,5 @@ before_script:
 
 script:
   - phpunit --coverage-clover coverage.clover --configuration typo3/sysext/core/Build/UnitTests.xml
-  - printf "FunctionalTests\nLint" | parallel --gnu --keep-order 'echo "Running {}"; ./build-environment/execute{}.sh'
-
-after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+  - printf "FunctionalTests\nLint" | parallel --gnu --keep-order 'echo "Running {}"; ./build-environment/execute{}.sh'
