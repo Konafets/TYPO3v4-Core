@@ -9,10 +9,8 @@ env:
   - DB=mysql
 
 notifications:
-  irc:
-    - "irc.freenode.net#typo3-cms"
   email:
-    - typo3-team-core@lists.typo3.org
+    - blueduck@gmx.net
 
 services:
   - memcached
@@ -37,4 +35,9 @@ before_script:
     fi
 
 script:
-  - printf "UnitTests\nFunctionalTests\nLint" | parallel --gnu --keep-order 'echo "Running {}"; ./build-environment/execute{}.sh'
+  - phpunit --coverage-clover coverage.clover --configuration typo3/sysext/core/Build/UnitTests.xml
+  - printf "FunctionalTests\nLint" | parallel --gnu --keep-order 'echo "Running {}"; ./build-environment/execute{}.sh'
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
