@@ -1,5 +1,5 @@
 filter:
-    excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*]
+    excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*]
 
 tools:
     php_loc:
@@ -8,6 +8,8 @@ tools:
 
     php_mess_detector:
         enabled: true
+        filter:
+            excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*]
         excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*]
         config:
             code_size_rules: { cyclomatic_complexity: true, npath_complexity: true, excessive_method_length: true, excessive_class_length: true, excessive_parameter_list: true, excessive_public_count: true, too_many_fields: true, too_many_methods: true, excessive_class_complexity: true }
