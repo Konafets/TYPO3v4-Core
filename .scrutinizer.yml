@@ -38,7 +38,7 @@ tools:
         excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*, typo3/sysext/impexp/Tests/*, typo3/sysext/workspaces/Tests/*]
 
     php_mess_detector:
-        enabled: true
+        enabled: false
         config:
             code_size_rules: 
                 cyclomatic_complexity: true
@@ -51,9 +51,9 @@ tools:
                 too_many_methods: false
                 excessive_class_complexity: false
             design_rules: 
-                number_of_class_children: true
-                depth_of_inheritance: true
-                coupling_between_objects: true
+                number_of_class_children: false
+                depth_of_inheritance: false
+                coupling_between_objects: false
             unused_code_rules: 
                 unused_local_variable: true
                 unused_private_method: true
@@ -70,7 +70,90 @@ tools:
     php_pdepend: true
 
     php_analyzer:
-        enabled: false
+        config:
+          parameter_reference_check: 
+              enabled: true
+          checkstyle: { enabled: true, no_trailing_whitespace: true, naming: { enabled: false, local_variable: '^[a-z][a-zA-Z0-9]*$', abstract_class_name: ^Abstract|Factory$, utility_class_name: 'Utils?$', constant_name: '^[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)*$', property_name: '^[a-z][a-zA-Z0-9]*$', method_name: '^(?:[a-z]|__)[a-zA-Z0-9]*$', parameter_name: '^[a-z][a-zA-Z0-9]*$', interface_name: '^[A-Z][a-zA-Z0-9]*Interface$', type_name: '^[A-Z][a-zA-Z0-9]*$', exception_name: '^[A-Z][a-zA-Z0-9]*Exception$', isser_method_name: '^(?:is|has|should|may|supports)' } }
+          unreachable_code:
+              enabled: true
+          check_access_control:
+              enabled: false
+          typo_checks:
+              enabled: false
+          check_variables:
+              enabled: false
+          check_calls:
+              enabled: false
+              too_many_arguments: false
+              missing_argument: false
+              argument_type_checks: lenient
+          suspicious_code:
+              enabled: false
+              overriding_parameter: false
+              overriding_closure_use: false
+              parameter_closure_use_conflict: false
+              parameter_multiple_times: false
+              non_existent_class_in_instanceof_check: false
+              non_existent_class_in_catch_clause: false
+              assignment_of_null_return: false
+              non_commented_switch_fallthrough: false
+              non_commented_empty_catch_block: false
+              overriding_private_members: false
+              use_statement_alias_conflict: false
+              precedence_in_condition_assignment: false
+          dead_assignments:
+              enabled: false
+          verify_php_doc_comments:
+              enabled: false
+              parameters: false
+              return: false
+              suggest_more_specific_types: false
+              ask_for_return_if_not_inferrable: false
+              ask_for_param_type_annotation: false
+          loops_must_use_braces:
+              enabled: false
+          check_usage_context:
+              enabled: false
+              foreach: 
+                  value_as_reference: false
+                  traversable: false
+          simplify_boolean_return:
+              enabled: false
+          phpunit_checks:
+              enabled: false
+          reflection_checks:
+              enabled: false
+          precedence_checks:
+              enabled: false
+              assignment_in_condition: false
+              comparison_of_bit_result: false
+          basic_semantic_checks:
+              enabled: false
+          unused_code:
+              enabled: false
+          deprecation_checks:
+              enabled: false
+          useless_function_calls:
+              enabled: false
+          metrics_lack_of_cohesion_methods:
+              enabled: false
+          metrics_coupling: { enabled: false, stable_code: { namespace_prefixes: {  }, classes: {  } } }
+          doctrine_parameter_binding:
+              enabled: false
+          doctrine_entity_manager_injection:
+              enabled: false
+          symfony_request_injection:
+              enabled: false
+          doc_comment_fixes:
+              enabled: true
+          reflection_fixes:
+              enabled: false
+          use_statement_fixes:
+              enabled: false
+              remove_unused: true
+              preserve_multiple: false
+              preserve_blanklines: true
+              order_alphabetically: false
 
     php_cpd:
         enabled: true
