@@ -29,16 +29,18 @@ filter:
       - typo3/sysext/reports/Tests/*
       - typo3/sysext/saltedpasswords/Tests/*
       - typo3/sysext/scheduler/Tests/*
+      - typo3/sysext/impexp/Tests/*
+      - typo3/sysext/workspaces/Tests/*
 
 tools:
     php_loc:
         enabled: true
-        excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*]
+        excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*, typo3/sysext/impexp/Tests/*, typo3/sysext/workspaces/Tests/*]
 
     php_mess_detector:
         enabled: false
         filter:
-            excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*]
+            excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*, typo3/sysext/impexp/Tests/*, typo3/sysext/workspaces/Tests/*]
         config:
             code_size_rules: { cyclomatic_complexity: true, npath_complexity: true, excessive_method_length: true, excessive_class_length: true, excessive_parameter_list: true, excessive_public_count: false, too_many_fields: false, too_many_methods: false, excessive_class_complexity: false }
             design_rules: { number_of_class_children: false, depth_of_inheritance: false, coupling_between_objects: false }
@@ -51,16 +53,16 @@ tools:
     php_analyzer:
         enabled: false
         filter:
-            excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*]
+            excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/impexp/Tests/*, typo3/sysext/workspaces/Tests/*]
 
     php_cpd:
         enabled: true
-        excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*]
+        excluded_dirs: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*, typo3/sysext/impexp/Tests/*, typo3/sysext/workspaces/Tests/*]
 
     php_code_sniffer:
         enabled: false
         filter:
-            excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*]
+            excluded_paths: [vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*, typo3/sysext/impexp/Tests/*, typo3/sysext/workspaces/Tests/*]
         config:
             standard: TYPO3CMS
 
