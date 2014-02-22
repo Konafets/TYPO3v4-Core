@@ -70,6 +70,7 @@ tools:
     php_pdepend: true
 
     php_analyzer:
+        enabled: false
         config:
           parameter_reference_check: 
               enabled: true
@@ -180,7 +181,7 @@ tools:
             standard: TYPO3CMS
 
     php_hhvm:
-        enabled: false
+        enabled: true
 
     external_code_coverage:
         enabled: true
