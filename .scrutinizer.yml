@@ -182,6 +182,8 @@ tools:
 
     php_hhvm:
         enabled: true
+        filter:
+            excluded_paths: [typo3/sysext/core/Classes/Http/HTTP/Request2.php, vendor/*, tests/*, Tests/*, app/*, bin/*, library/*, contrib/*, typo3/contrib/*, typo3/sysext/adodb/*, typo3/sysext/openid/lib/*, typo3/sysext/core/Tests/*, typo3/sysext/backend/Tests/*, typo3/sysext/frontend/Tests/*, typo3/sysext/belog/Tests/*, typo3/sysext/beuser/Tests/*, typo3/sysext/documentation/Tests/*, typo3/sysext/extbase/Tests/*, typo3/sysext/extensionmanager/Tests/*, typo3/sysext/felogin/Tests/*, typo3/sysext/fluid/Tests/*, typo3/sysext/form/Tests/*, typo3/sysext/indexed_search/Tests/*, typo3/sysext/install/Tests/*, typo3/sysext/lang/Tests/*, typo3/sysext/lowlevel/Tests/*, typo3/sysext/recordlist/Tests/*, typo3/sysext/reports/Tests/*, typo3/sysext/saltedpasswords/Tests/*, typo3/sysext/scheduler/Tests/*, typo3/sysext/impexp/Tests/*, typo3/sysext/workspaces/Tests/*, typo3/sysext/t3editor/Classes/Hook/init.php]
 
     external_code_coverage:
         enabled: true
